@@ -1,6 +1,6 @@
 local M = {}
 
--- local plugin_conf = require "custom.plugins.configs"
+local plugin_conf = require "custom.plugins.configs"
 local userPlugins = require "custom.plugins"
 
 M.plugins = {
@@ -58,9 +58,9 @@ M.plugins = {
    },
 
    default_plugin_config_replace = {
-      -- nvim_treesitter = plugin_conf.treesitter,
-      -- nvim_tree = pulgin_conf.nvimtree,
-      -- alpha = "custom.configs.dashboard",
+      nvim_treesitter = plugin_conf.treesitter,
+      nvim_tree = plugin_conf.nvimtree,
+      alpha = require "custom.configs.dashboard",
    },
 
    install = userPlugins,

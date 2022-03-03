@@ -4,11 +4,25 @@ local b = null_ls.builtins
 local sources = {
 
    -- webdev stuff
-   b.formatting.deno_fmt,
    b.formatting.prettierd.with { filetypes = { "html", "markdown", "css" } },
+   b.formatting.deno_fmt,
 
+   -- go
+   b.diagnostics.golangci_lint,
+   b.formatting.gofmt,
+
+   -- python
+   b.diagnostics.pylint,
    -- Lua
-   b.formatting.stylua,
+   b.formatting.stylua.with {
+      -- env = {
+      --    XDG_CONFIG_HOME = vim.fn.expand "~/.config/nvim/lua/custom/configs/formatter",
+      -- },
+      filetypes = { "lua" },
+      command = "stylua",
+      args = { "-s", "-" },
+      -- extra_args = { "--config-path", vim.fn.expand "~/.config/nvim/lua/custom/configs/formatter/stylua.toml" },
+   },
    b.diagnostics.luacheck.with { extra_args = { "--global vim" } },
 
    -- Shell
@@ -22,8 +36,14 @@ M.setup = function()
    null_ls.setup {
       debug = true,
       sources = sources,
+
+      -- format on save
+      on_attach = function(client)
+         if client.resolved_capabilities.document_formatting then
+            vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()"
+         end
+      end,
    }
 end
 
 return M
-
