@@ -10,8 +10,6 @@ return {
    },
 
    {
-<<<<<<< HEAD
-=======
       "tpope/vim-surround",
    },
 
@@ -24,7 +22,6 @@ return {
    },
 
    {
->>>>>>> 37a6b7bd568df204f0716844b1dfa231d216c576
       "nvim-telescope/telescope-media-files.nvim",
       after = "telescope.nvim",
       config = function()
