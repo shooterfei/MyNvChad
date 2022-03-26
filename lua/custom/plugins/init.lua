@@ -10,14 +10,6 @@ return {
    },
 
    {
-      "jose-elias-alvarez/null-ls.nvim",
-      after = "nvim-lspconfig",
-      config = function()
-         require("custom.plugins.null-ls").setup()
-      end,
-   },
-
-   {
       "nvim-telescope/telescope-media-files.nvim",
       after = "telescope.nvim",
       config = function()
@@ -74,7 +66,7 @@ return {
       "jose-elias-alvarez/null-ls.nvim",
       after = "nvim-lspconfig",
       config = function()
-         require("custom.configs.formatter").setup()
+         require("custom.configs.null_ls").setup()
       end,
    },
 

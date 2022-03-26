@@ -3,6 +3,7 @@ local b = null_ls.builtins
 
 local sources = {
 
+   -- javascript
    b.formatting.prettierd.with { filetypes = { "html", "markdown", "css" } },
    b.formatting.deno_fmt,
 
@@ -11,7 +12,9 @@ local sources = {
    b.formatting.gofmt,
 
    -- python
-   b.diagnostics.pylint,
+   b.diagnostics.pyproject_flake8,
+   b.formatting.black,
+
    -- Lua
    b.formatting.stylua.with {
       -- env = {
@@ -27,6 +30,10 @@ local sources = {
    -- Shell
    b.formatting.shfmt,
    b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
+
+   -- toml
+   -- taplo 已经成为内置功能, 无需再此处配置
+   -- b.formatting.taplo,
 }
 
 local M = {}

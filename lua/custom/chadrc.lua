@@ -183,7 +183,7 @@ M.mappings = {
 
       -- map to <ESC> with no lag
       better_escape = { -- <ESC> will still work
-         esc_insertmode = { "jk" }, -- multiple mappings allowed
+         esc_insertmode = { "jj" }, -- multiple mappings allowed
       },
 
       lspconfig = {
@@ -202,7 +202,7 @@ M.mappings = {
          float_diagnostics = "ge",
          goto_prev = "[d",
          goto_next = "]d",
-         set_loclist = "<leader>q",
+         set_loclist = "<leader>l",
          formatting = "<leader>fm",
       },
 
