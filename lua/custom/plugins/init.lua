@@ -1,3 +1,5 @@
+local plugin_settings = require("core.utils").load_config().plugins
+
 return {
 
    {
@@ -7,6 +9,12 @@ return {
       config = function()
          require("nvim-ts-autotag").setup()
       end,
+   },
+
+   {
+      -- disable = not plugin_settings.status.alpha,
+      "goolord/alpha-nvim",
+      config = require("core.utils").override_req("alpha", "custom.configs.dashboard"),
    },
 
    {
