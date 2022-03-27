@@ -53,9 +53,11 @@ return {
       "mg979/vim-visual-multi",
       branch = "master",
    },
+
    {
       "mhinz/vim-startify",
    },
+
    {
       "williamboman/nvim-lsp-installer",
       config = function()

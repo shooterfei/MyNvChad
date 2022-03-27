@@ -34,6 +34,9 @@ local sources = {
    -- toml
    -- taplo 已经成为内置功能, 无需再此处配置
    -- b.formatting.taplo,
+
+   -- git
+   b.code_actions.gitsigns,
 }
 
 local M = {}
