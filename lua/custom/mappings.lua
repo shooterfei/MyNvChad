@@ -12,3 +12,6 @@ map("n", "<leader>tf", ":TZFocus <CR>")
 
 -- basic
 map("n", "<leader>q", ":q <CR>")
+
+-- dashboard  alpha
+map("n", "<leader>db", ":Alpha <CR>")

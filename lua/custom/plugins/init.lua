@@ -55,10 +55,6 @@ return {
    },
 
    {
-      "mhinz/vim-startify",
-   },
-
-   {
       "williamboman/nvim-lsp-installer",
       config = function()
          require "custom.configs.lspconfig"
@@ -169,19 +165,6 @@ return {
    {
       "easymotion/vim-easymotion",
    },
-   -- 平滑滚动
-   -- {
-   --    "karb94/neoscroll.nvim",
-   --    opt = true,
-   --    config = function()
-   --       require("neoscroll").setup()
-   --    end,
-   --
-   --    -- lazy loading
-   --    setup = function()
-   --       require("core.utils").packer_lazy_load "neoscroll.nvim"
-   --    end,
-   -- },
 
    -- 自动打开上次浏览位置
    {
