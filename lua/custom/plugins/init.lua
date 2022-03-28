@@ -170,10 +170,14 @@ return {
    },
 
    -- 自安装插件
+   -- 快捷跳转
    {
       "easymotion/vim-easymotion",
    },
 
+   {
+      "chrisbra/unicode.vim",
+   },
    -- 自动打开上次浏览位置
    {
       "farmergreg/vim-lastplace",

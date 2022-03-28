@@ -79,6 +79,7 @@ local buttons = {
       button("SPC b m", "  Bookmarks  ", ":Telescope marks<CR>"),
       button("SPC t h", "  Themes  ", ":Telescope themes<CR>"),
       button("SPC e s", "  Settings", ":e $MYVIMRC | :cd %:p:h <CR>"),
+      button("SPC d b", "  Show Dashboard  ", ":Alpha <CR>"),
    },
    opts = {
       spacing = 1,

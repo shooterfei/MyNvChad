@@ -5,7 +5,7 @@
 vim.g.VM_show_warnings = 0
 
 -- nvim-qt 的字体设置， 需先安装nerd-font 字体
-vim.opt.guifont="Hack Nerd Font Mono"
+vim.opt.guifont = "Hack Nerd Font Mono:h18"
 
 -- 设置asynctasks窗口排版
 vim.g.asynctasks_term_pos = "bottom"
@@ -22,26 +22,26 @@ vim.g.loaded_zip = 0
 vim.g.loaded_zipPlugin = 0
 
 local disabled_built_ins = {
-	"2html_plugin",
-	"getscript",
-	"getscriptPlugin",
-	"gzip",
-	"logipat",
-	"netrw",
-	"netrwPlugin",
-	"netrwSettings",
-	"netrwFileHandlers",
-	"matchit",
-	"tar",
-	"tarPlugin",
-	"rrhelper",
-	"spellfile_plugin",
-	"vimball",
-	"vimballPlugin",
-	"zip",
-	"zipPlugin",
+   "2html_plugin",
+   "getscript",
+   "getscriptPlugin",
+   "gzip",
+   "logipat",
+   "netrw",
+   "netrwPlugin",
+   "netrwSettings",
+   "netrwFileHandlers",
+   "matchit",
+   "tar",
+   "tarPlugin",
+   "rrhelper",
+   "spellfile_plugin",
+   "vimball",
+   "vimballPlugin",
+   "zip",
+   "zipPlugin",
 }
 
 for _, plugin in pairs(disabled_built_ins) do
-	vim.g["loaded_" .. plugin] = nil
+   vim.g["loaded_" .. plugin] = nil
 end
