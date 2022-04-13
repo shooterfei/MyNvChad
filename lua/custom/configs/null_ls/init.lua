@@ -27,6 +27,9 @@ local sources = {
 	}),
 	b.diagnostics.luacheck.with({ extra_args = { "--global vim" } }),
 
+	-- java
+	b.diagnostics.semgrep,
+
 	-- Shell
 	b.formatting.shfmt,
 	b.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
@@ -47,11 +50,11 @@ M.setup = function()
 		sources = sources,
 
 		-- format on save
-		on_attach = function(client)
-			if client.resolved_capabilities.document_formatting then
-				vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-			end
-		end,
+		--[[ on_attach = function(client)
+         if client.resolved_capabilities.document_formatting then
+            vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()"
+         end
+      end, ]]
 	})
 end
 

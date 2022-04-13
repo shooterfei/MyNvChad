@@ -176,6 +176,13 @@ return {
    },
 
    {
+      "nvim-telescope/telescope.nvim",
+      requires = { { "nvim-lua/plenary.nvim" }, { "kdheepak/lazygit.nvim" } },
+      config = function()
+         require("telescope").load_extension "lazygit"
+      end,
+   },
+   {
       "chrisbra/unicode.vim",
    },
    -- 自动打开上次浏览位置

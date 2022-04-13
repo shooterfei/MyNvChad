@@ -12,7 +12,6 @@ end
 
 -- local on_attach = require("custom.configs.lspconfig.handlers").on_attach
 
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 local lsp_installer = require "nvim-lsp-installer"
 
@@ -37,18 +36,22 @@ lsp_installer.on_server_ready(function(server)
    }
 
    if server.name == "jsonls" then
-          local jsonls_opts = require("custom.configs.lspconfig.settings.jsonls")
-          opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
+      local jsonls_opts = require "custom.configs.lspconfig.settings.jsonls"
+      opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
    end
 
    if server.name == "sumneko_lua" then
-          local sumneko_opts = require("custom.configs.lspconfig.settings.sumneko_lua")
-          opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
+      local sumneko_opts = require "custom.configs.lspconfig.settings.sumneko_lua"
+      opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
    end
 
    if server.name == "pyright" then
-          local pyright_opts = require("custom.configs.lspconfig.settings.pyright")
-          opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+      local pyright_opts = require "custom.configs.lspconfig.settings.pyright"
+      opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+   end
+   if server.name == "tailwindcss" then
+      local tailwindcss_opts = require "custom.configs.lspconfig.settings.tailwindcss"
+      opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
    end
    server:setup(opts)
    -- " vim.cmd [[ do User LspAttachBuffers ]]
